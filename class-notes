@@ -1,0 +1,55 @@
+In Java, in order to achieve abstraction there are 2 techniques.
+1. Using abstract classes
+2. Using interfaces.
+
+Abstract Classes.
+Abstract classes are created using 'abstract' keyword
+Abstract classes can have both abstract and non-abstract methods
+If you want to create an abstract method, they you must use 'abstract' keyword in the method signature explicitly
+You can also have non-abstract, concrete methods in the abstract class
+Which means you can use abstract classes to achieve partial abstraction. 
+Any concrete class that extends an abstract class, MUST implement all of its abstract methods.
+Any concrete class that extends an abstract class DOES NOT have to implement its concrete methods, but can 
+choose to override them
+An abstract class can extend another abstract class. Whenever an abstract class extends another abstract class,
+it does not have to implement its parents abstract methods
+You cannot create an object from an abstrac class, but you can from its concrete sub types
+
+Interfaces
+Interfaces are also java classes, but they are created with interface keyword. Interfaces are usually needed in order
+to define some behavior that other concrete classes can implement.
+When you define any method in an interface, that method automatically becomes "public abstract" even if we dont add 
+"public abstract" in the method signature.
+Interface methods are always public - interfaces methods are meant to be implemented,so they cannot have less visibility
+than public. The  purpose of interfaces after all is to implement them i.e to provide method bodies for them inside
+concrete classes
+A good practice when it comes to creating an interface is to add 'I' in front of the interface name
+e.g ILaptop, IReadable, IDoctor;
+A concrete class that implements the interface is usually given 'Impl' suffix at the end of its class name
+
+Any concrete class that implements an interface, MUST implement that interface's abstract methods
+
+You can also create variables inside an interface BUT variables will "public static final" by default
+Which means even if you dont add "public static final", java will add it for you.
+You cannot create an object from an interface but you can from its concrete implementing class
+
+===============================
+an interface can extend another interface but not implement!
+Let's say we have a interface A and it is extended by interface B. We have a concrete class C implementing B, which means
+C MUST implement all of B's abtract methods as well a A's methods
+
+Golden Rule:
+Whenever a concrete class extends an abstract class or implements an interface, that concrete class must always
+implement all the methods from its super abstract as well as that interface
+
+extends keywords must be used between two classes or between two interfaces
+
+implements keyword must be used between a class and interface
+
+
+
+
+
+
+
+
